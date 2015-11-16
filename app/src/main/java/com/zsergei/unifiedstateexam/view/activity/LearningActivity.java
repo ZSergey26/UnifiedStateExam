@@ -1,4 +1,4 @@
-package com.zsergei.unifiedstateexam;
+package com.zsergei.unifiedstateexam.view.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class LearningActivity extends AppCompatActivity {
+import com.zsergei.unifiedstateexam.R;
+
+public class LearningActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

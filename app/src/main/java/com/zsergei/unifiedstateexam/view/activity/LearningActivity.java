@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.zsergei.unifiedstateexam.R;
+import com.zsergei.unifiedstateexam.view.fragment.TextInputFragment;
+import com.zsergei.unifiedstateexam.view.fragment.TextTheoryFragment;
 
 public class LearningActivity extends BaseActivity {
 
@@ -17,17 +19,9 @@ public class LearningActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learning_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        addFragment(R.id.learning_container_for_fragments, new TextTheoryFragment());
+        replaceFragment(R.id.learning_container_for_fragments, new TextInputFragment());
     }
 
     @Override

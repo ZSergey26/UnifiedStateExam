@@ -12,10 +12,10 @@ import com.zsergei.unifiedstateexam.R;
 /**
  * Created by Sergei Zarochentsev on 16.11.2015.
  */
-public class TextInputFragment extends Fragment {
+public class TextTheoryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.text_input_fragment, container, false);
+        return inflater.inflate(R.layout.theory_text_fragment, container, false);
     }
 }

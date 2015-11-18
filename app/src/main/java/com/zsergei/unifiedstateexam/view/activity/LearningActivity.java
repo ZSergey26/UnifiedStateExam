@@ -16,7 +16,7 @@ public class LearningActivity extends BaseActivity implements LearningView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learning_activity);
 
-        replaceFragment(R.id.learning_container_for_fragments, new TextInputFragment());
+        replaceFragment(R.id.learning_container_for_fragments, new TextTheoryFragment());
     }
 
     @Override

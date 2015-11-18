@@ -13,5 +13,6 @@
         android:layout_height="wrap_content"
         android:text="ВАС ПОНЕЛ"
         android:id="@+id/button"
+        android:onClick="theoryLearningComplete"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

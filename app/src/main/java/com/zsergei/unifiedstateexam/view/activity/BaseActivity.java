@@ -3,6 +3,7 @@ package com.zsergei.unifiedstateexam.view.activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 /**
  * Created by Sergei Zarochentsev on 16.11.2015.
@@ -24,5 +25,9 @@ public class BaseActivity extends AppCompatActivity {
     protected void replaceFragmentImmediately(int containerViewId, Fragment fragment) {
         replaceFragment(containerViewId, fragment);
         getFragmentManager().executePendingTransactions();
+    }
+
+    protected void showToast(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 }

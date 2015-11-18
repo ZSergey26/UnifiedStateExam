@@ -1,26 +1,21 @@
 package com.zsergei.unifiedstateexam.view.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.zsergei.unifiedstateexam.R;
+import com.zsergei.unifiedstateexam.view.LearningView;
 import com.zsergei.unifiedstateexam.view.fragment.TextInputFragment;
 import com.zsergei.unifiedstateexam.view.fragment.TextTheoryFragment;
 
-public class LearningActivity extends BaseActivity {
+public class LearningActivity extends BaseActivity implements LearningView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learning_activity);
 
-        addFragment(R.id.learning_container_for_fragments, new TextTheoryFragment());
         replaceFragment(R.id.learning_container_for_fragments, new TextInputFragment());
     }
 
@@ -44,5 +39,10 @@ public class LearningActivity extends BaseActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void showTheoryScreen(String text) {
+        replaceFragment(R.id.learning_container_for_fragments, new TextTheoryFragment());
     }
 }

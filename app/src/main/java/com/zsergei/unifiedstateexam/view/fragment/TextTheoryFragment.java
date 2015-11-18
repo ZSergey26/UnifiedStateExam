@@ -13,6 +13,7 @@ import com.zsergei.unifiedstateexam.R;
  * Created by Sergei Zarochentsev on 16.11.2015.
  */
 public class TextTheoryFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

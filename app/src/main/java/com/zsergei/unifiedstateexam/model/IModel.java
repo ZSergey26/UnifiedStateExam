@@ -5,4 +5,6 @@ package com.zsergei.unifiedstateexam.model;
  */
 public interface IModel {
     void getNext();
+
+    void continueLearning();
 }

@@ -21,6 +21,7 @@ public class LearningActivity extends BaseActivity implements LearningView {
         setContentView(R.layout.learning_activity);
 
         presenter = new Presenter(this);
+        presenter.continueLearning();
         //showTheoryScreen("Theory");
     }
 

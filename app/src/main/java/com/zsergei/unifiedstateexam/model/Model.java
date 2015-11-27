@@ -1,5 +1,7 @@
 package com.zsergei.unifiedstateexam.model;
 
+import com.zsergei.unifiedstateexam.model.data.Task;
+import com.zsergei.unifiedstateexam.model.data.TheoryLearnTask;
 import com.zsergei.unifiedstateexam.presenter.IPresenter;
 import com.zsergei.unifiedstateexam.presenter.Presenter;
 
@@ -18,5 +20,16 @@ public class Model implements IModel {
     @Override
     public void getNext() {
 
+    }
+
+    @Override
+    public void continueLearning() {
+        restoreState();
+        presenter.setCurrentTask(lastTask);
+    }
+
+    Task lastTask;
+    private void restoreState() {
+        lastTask = new TheoryLearnTask();
     }
 }

@@ -1,5 +1,7 @@
 package com.zsergei.unifiedstateexam.view.activity;
 
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +14,8 @@ import com.zsergei.unifiedstateexam.view.LearningView;
 import com.zsergei.unifiedstateexam.view.fragment.AudioFragment;
 import com.zsergei.unifiedstateexam.view.fragment.TextInputFragment;
 import com.zsergei.unifiedstateexam.view.fragment.TextTheoryFragment;
+
+import java.io.IOException;
 
 public class LearningActivity extends BaseActivity implements LearningView {
 
@@ -46,4 +50,22 @@ public class LearningActivity extends BaseActivity implements LearningView {
         presenter.next();
     }
 
+    public void playAudio(View view) {
+        String url = "http://cs611629v4.vk.me/u136978050/audios/bb2b0a607087.mp3?extra=j-rbyLoPXqVSAB8MFKjPSdcwiRfkp2iXTODiIxNxuDXIU63ABzEKnB7puZyUn6cBPKACvpMAziAvXBI0jBCZRZcxmNfhvNaFDRg";
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        try {
+            mediaPlayer.setDataSource(url);
+            mediaPlayer.prepareAsync();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.start();
+            }
+        });
+
+    }
 }

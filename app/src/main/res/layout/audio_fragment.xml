@@ -8,6 +8,7 @@
         android:layout_width="153dp"
         android:layout_height="144dp"
         android:id="@+id/imageButton"
+        android:onClick="playAudio"
         android:src="@drawable/ic_play_circle_outline_black_48dp" />
 
     <TextView

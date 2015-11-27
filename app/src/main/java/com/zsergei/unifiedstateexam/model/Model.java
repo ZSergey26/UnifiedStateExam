@@ -1,5 +1,6 @@
 package com.zsergei.unifiedstateexam.model;
 
+import com.zsergei.unifiedstateexam.model.data.AudioExerciseTask;
 import com.zsergei.unifiedstateexam.model.data.Task;
 import com.zsergei.unifiedstateexam.model.data.TextInputTask;
 import com.zsergei.unifiedstateexam.model.data.TheoryLearnTask;
@@ -43,7 +44,7 @@ public class Model implements IModel {
         tasks = new ArrayList<>();
         tasks.add(new TheoryLearnTask());
         tasks.add(new TextInputTask());
-        tasks.add(new TheoryLearnTask());
+        tasks.add(new AudioExerciseTask());
         tasks.add(new TextInputTask());
         tasks.add(new TheoryLearnTask());
         tasks.add(new TextInputTask());

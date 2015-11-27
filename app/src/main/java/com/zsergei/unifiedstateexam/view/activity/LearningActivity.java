@@ -9,6 +9,7 @@ import com.zsergei.unifiedstateexam.R;
 import com.zsergei.unifiedstateexam.presenter.IPresenter;
 import com.zsergei.unifiedstateexam.presenter.Presenter;
 import com.zsergei.unifiedstateexam.view.LearningView;
+import com.zsergei.unifiedstateexam.view.fragment.AudioFragment;
 import com.zsergei.unifiedstateexam.view.fragment.TextInputFragment;
 import com.zsergei.unifiedstateexam.view.fragment.TextTheoryFragment;
 
@@ -34,6 +35,11 @@ public class LearningActivity extends BaseActivity implements LearningView {
     @Override
     public void showTextInputTaskScreen(String text) {
         replaceFragment(R.id.learning_container_for_fragments, new TextInputFragment());
+    }
+
+    @Override
+    public void showAudioScreen(String s) {
+        replaceFragment(R.id.learning_container_for_fragments, new AudioFragment());
     }
 
     public void theoryLearningComplete(View view) {

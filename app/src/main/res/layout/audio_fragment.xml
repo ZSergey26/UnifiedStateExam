@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageButton
+        android:layout_width="153dp"
+        android:layout_height="144dp"
+        android:id="@+id/imageButton"
+        android:src="@drawable/ic_play_circle_outline_black_48dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="She ____ tennis"
-        android:id="@+id/textView" />
+        android:text="He drinks ____ ."
+        android:id="@+id/textView2" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/editText" />
+        android:id="@+id/editText2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ответить"
+        android:text="Дальше"
         android:onClick="theoryLearningComplete"
         android:id="@+id/button2" />
 

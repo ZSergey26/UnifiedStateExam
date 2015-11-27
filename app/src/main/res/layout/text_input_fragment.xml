@@ -3,6 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="She ____ tennis"
+        android:id="@+id/textView" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,10 +17,11 @@
         android:ems="10"
         android:id="@+id/editText" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="SLABA"
-        android:id="@+id/textView" />
+        android:text="New Button"
+        android:onClick="theoryLearningComplete"
+        android:id="@+id/button2" />
+
 </LinearLayout>

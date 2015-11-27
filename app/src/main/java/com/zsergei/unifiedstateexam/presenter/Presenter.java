@@ -29,6 +29,6 @@ public class Presenter implements IPresenter {
 
     @Override
     public void next() {
-
+        model.getNext();
     }
 }

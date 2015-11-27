@@ -31,7 +31,13 @@ public class LearningActivity extends BaseActivity implements LearningView {
         replaceFragment(R.id.learning_container_for_fragments, new TextTheoryFragment());
     }
 
-    public void theoryLearningComplete(View view) {
-        showToast("ВЫПЬЕМ ЗА ЛЮБОВЬ");
+    @Override
+    public void showTextInputTaskScreen(String text) {
+        replaceFragment(R.id.learning_container_for_fragments, new TextInputFragment());
     }
+
+    public void theoryLearningComplete(View view) {
+        presenter.next();
+    }
+
 }

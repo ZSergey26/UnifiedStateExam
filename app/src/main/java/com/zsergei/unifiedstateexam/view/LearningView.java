@@ -5,4 +5,5 @@ package com.zsergei.unifiedstateexam.view;
  */
 public interface LearningView {
     void showTheoryScreen(String text);
+    void showTextInputTaskScreen(String text);
 }
